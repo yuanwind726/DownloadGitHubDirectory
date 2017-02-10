@@ -1,0 +1,12 @@
+{
+  "name": "Download GitHub Directory",
+  "description": "To download single directory on GitHub by just clicking the directory icon",
+  "version": "0.1",
+  "minimum_chrome_version": "16.0.884",
+  "permissions": ["downloads", "<all_urls>"],
+  "manifest_version": 2,
+  "content_scripts":[{
+        "matches":["https://github.com/*"],
+        "js":["downgit.js", "jszip.min.js", "filesaver.min.js"]
+    }]
+}
