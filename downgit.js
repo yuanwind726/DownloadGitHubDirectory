@@ -114,8 +114,7 @@ function httpget(url) {
   return new Promise(function (resolve, reject) {
     // Do the usual XHR stuff
     var req = new XMLHttpRequest();
-    var appendedAccessToken = 'access_token=8ca33229992392b5bafeed43dc837ed9ada45f0c';
-    req.open('GET', trimedQueryStringUrl(url).concat(appendedAccessToken));
+    req.open('GET', trimedQueryStringUrl(url));
 
     req.onload = function () {
       // This is called even on 404 etc
